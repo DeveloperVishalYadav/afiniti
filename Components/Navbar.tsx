@@ -2,8 +2,8 @@ import React from "react";
 
 export default function Navbar() {
   return (
-    <header className="fixed w-full z-30 bg-transparent hover:bg-white  text-white hover:text-gray-800 font-medium">
-      <div className="mx-auto py-2 px-14 ">
+    <header className="fixed w-full z-30 top-0 bg-transparent hover:bg-white  text-white hover:text-gray-800 font-medium">
+      <div className="mx-auto py-2 lg:px-14 ">
         <div className="flex h-16 items-center justify-between">
           <div className="flex-1 md:flex md:items-center md:gap-12">
             <h1 className="font-bold text-2xl">afiniti</h1>

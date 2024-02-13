@@ -27,8 +27,7 @@ export default function Footer() {
               </a>
             </li>
           </ul>
-
-          <ul className="mt-8 flex justify-center gap-6 sm:mt-0 lg:justify-end">
+          <ul className="mt-8 flex justify-center gap-6  lg:justify-end">
             <li className="text-md p-2 ">
               © 2024 Afiniti. All rights reserved
             </li>

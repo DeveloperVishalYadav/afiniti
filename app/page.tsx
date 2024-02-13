@@ -5,7 +5,7 @@ import LogoCarousel from "@/Components/LogoCarousel";
 export default function Home() {
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />
       <div className="relative">
         <Image
           className="absolute object-cover w-full h-full"

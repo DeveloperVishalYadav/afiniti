@@ -1,17 +1,67 @@
 "use client";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-import "swiper/css";
-import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
+const logos = [
+  "/images/brands/2.png",
+  "/images/brands/1.png",
+  "/images/brands/7.png",
+  "/images/brands/3.png",
+  "/images/brands/4.png",
+  "/images/brands/5.png",
+  "/images/brands/6.png",
+  // Add more logo URLs as needed
+];
 
 const LogoCarousel: React.FC = () => {
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    arrows: false,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    autoplay: true, // Enable autoplay
+    autoplaySpeed: 1000, // Set autoplay speed (milliseconds)
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
   return (
     <>
-      <div
+      <Slider {...settings}>
+        {logos.map((logo, index) => (
+          <div key={index}>
+            <Image src={logo} alt={`Logo ${index}`} height={150} width={150} />
+          </div>
+        ))}
+      </Slider>
+      {/* <div
         x-data="{}"
         x-init="$nextTick(() => {
         let ul = $refs.logos;
@@ -142,7 +192,7 @@ const LogoCarousel: React.FC = () => {
             />
           </li>
         </ul>
-      </div>
+      </div> */}
     </>
   );
 };

@@ -3,9 +3,9 @@ import React from "react";
 export default function Footer() {
   return (
     <footer className="bg-[#0a2133]">
-      <div className="mx-auto w-full px-4 lg:px-32 pb-8 sm:px-6  ">
-        <div className="border-gray-100 pt-8 sm:flex sm:items-center sm:justify-between">
-          <ul className="flex flex-wrap justify-center text-white gap-4 text-md lg:justify-end">
+      <div className="mx-auto w-full px-4 lg:px-32 pb-8 sm:px-6">
+        <div className="border-gray-100   sm:flex sm:items-center sm:justify-between">
+          <ul className="flex flex-wrap justify-center text-white gap-4 pt-8 text-md lg:justify-end">
             <li>
               <a href="#" className="  transition hover:opacity-75">
                 {" "}
@@ -27,7 +27,7 @@ export default function Footer() {
               </a>
             </li>
           </ul>
-          <ul className="mt-8 flex justify-center gap-6  lg:justify-end">
+          <ul className="mt-8 flex justify-center gap-6 lg:justify-end">
             <li className="text-md p-2 ">
               © 2024 Afiniti. All rights reserved
             </li>
